@@ -1,0 +1,14 @@
+ports:
+  - name: Anythink Frontend
+    description: The frontend react app for Anythink
+    port: 3001
+    onOpen: open-preview
+  - name: Anythink Backend 
+    description: The backend app for Anythink
+    port: 3000
+    visibility: public
+    onOpen: ignore
+  - name: Postgres Database
+    description: The DB for Anythink
+    port: 5433
+    onOpen: ignore

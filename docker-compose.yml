@@ -14,6 +14,7 @@ services:
       - RAILS_ENV=development
       - PORT=3000
       - DATABASE_URL=postgres://user:@postgres:5432
+      - GITPOD_HOST_URL=3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}
     depends_on:
       - "postgres"
 
@@ -24,6 +25,7 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=3001
+      - REACT_APP_GITPOD_BACKEND_URL=https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}
     working_dir: /usr/src
     volumes:
       - ./:/usr/src/
